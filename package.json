@@ -6,9 +6,21 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "prettier": "^2.6.2"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,md,ts}": [
+      "npm format --uncommited"
+    ]
+  }
 }
