@@ -2,10 +2,14 @@
   "name": "slider-component",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install"
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "prettier": "^2.6.2"
   },
   "workspaces": [
