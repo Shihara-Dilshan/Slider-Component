@@ -2,7 +2,19 @@
   "name": "slider-component",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,md,ts}": [
+      "npm format --uncommited"
+    ]
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {
@@ -12,15 +24,5 @@
   },
   "workspaces": [
     "packages/*"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,json,md,ts}": [
-      "yarn format --uncommited"
-    ]
-  }
+  ]
 }
