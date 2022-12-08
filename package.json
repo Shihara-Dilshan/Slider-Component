@@ -20,7 +20,7 @@
   },
   "lint-staged": {
     "*.{js,json,md,ts}": [
-      "npm format --uncommited"
+      "yarn format --uncommited"
     ]
   }
 }
